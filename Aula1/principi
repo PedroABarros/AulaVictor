@@ -1,0 +1,17 @@
+from array import array
+from random import randint
+
+idades = array("i", 5 * [0])
+
+for i in range(len(idades)):
+    idades[i] = randint(10, 20)
+
+print(idades)
+
+menor_de_idade = 0
+for i in range(len(idades)):
+    if idades[i] < 18:
+        print(f"{idades[i]} é menor de idade")
+        menor_de_idade += 1
+
+print(f"Tem {menor_de_idade} pessoas menores de idade")
